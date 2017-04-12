@@ -4,8 +4,7 @@ import java.util.Scanner;
 public class Encrypt {
 		Scanner input = new Scanner(System.in);
 		
-	public int[] Key() throws InterruptedException {
-		Thread.sleep(1000);
+	public int[] Key(){
 		System.out.println("Enter Key Length: ");
 		Scanner key_length = input;
 		int kl = Integer.parseInt(key_length.nextLine().replaceAll("\\s", ""));
@@ -75,7 +74,7 @@ public class Encrypt {
 		return cipher_text;
 	}
 	
-	public String VigenereEncrypt() throws InterruptedException {
+	public String VigenereEncrypt(){
 		String return_text = "";
 		String plain_text = PlainText().toLowerCase();
 		int text_length = plain_text.length();
@@ -107,6 +106,7 @@ public class Encrypt {
 			text_length -= 1;
 		}
 		input.close();
+		System.out.println("Your encrypted message is:\n");
 		return return_text;
 		
 	}
